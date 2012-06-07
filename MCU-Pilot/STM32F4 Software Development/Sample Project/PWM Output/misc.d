@@ -1,0 +1,9 @@
+misc.o: ..\..\Library\Source\misc.c
+misc.o: ..\..\Library\Include\misc.h
+misc.o: ..\..\Library\Include\stm32f4xx.h
+misc.o: C:\Keil\ARM\CMSIS\Include\core_cm4.h
+misc.o: C:\Keil\ARM\RV31\Inc\stdint.h
+misc.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+misc.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+misc.o: C:\Keil\ARM\CMSIS\Include\core_cm4_simd.h
+misc.o: ..\..\Library\Include\system_stm32f4xx.h

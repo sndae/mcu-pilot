@@ -1,0 +1,1 @@
+-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I..\..\Library\Include -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -o "stm32f4xx_sdio.o" --omf_browse "stm32f4xx_sdio.crf" --depend "stm32f4xx_sdio.d" "..\..\Library\Source\stm32f4xx_sdio.c"
