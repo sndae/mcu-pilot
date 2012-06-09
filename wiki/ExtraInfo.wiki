@@ -1,0 +1,2 @@
+DS610 cyclic 200Hz (blue)
+DS650 rudder 333Hz (blue) and 1520µs neutral impulse (blue)
