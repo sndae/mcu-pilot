@@ -1,2 +1,2 @@
-DS610 200Hz
-DS650 333Hz and 1520µs neutral impulse
+DS610 200Hz and 1520µs neutral
+DS650 333Hz and 1520µs neutral
