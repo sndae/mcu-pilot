@@ -1,4 +1,6 @@
-{{{// i use timer 0 for example it runs with default settings at 976Hz
+{{{
+
+// i use timer 0 for example it runs with default settings at 976Hz
 // and it resolution is 8 bit (0-255)
 
 int duty_time = 200; // 200 will give at 488hz a PPM value of 1600us
@@ -45,4 +47,5 @@ ISR(TIMER0_COMPA_vect){
 void loop(){
   // the loop isnt needed for this method
 }
+
 }}}
