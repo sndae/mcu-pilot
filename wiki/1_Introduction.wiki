@@ -2,7 +2,7 @@
 #labels Featured
 
 =1 Introduction =
-This project deals with the development of flight electronics for a small scale-unmanned helicopter. 
+This project deals with the development of flight electronics for small scale-unmanned helicopter. 
 
 =1.1 The MCU-Pilot Project =
 
