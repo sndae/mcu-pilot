@@ -1,3 +1,5 @@
+#summary Servo Specifications
+
 =Align DS610 Servo=
   * 333Hz Refresh Rate and 1520µs Neutral Pulse 
   * 0.10Second/60Degree, 9.6Kg.cm Torque @ 4.8V
