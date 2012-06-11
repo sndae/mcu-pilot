@@ -1,4 +1,0 @@
-#summary Work In Progress
-#labels Featured
-
-= *1. Introduction* =
