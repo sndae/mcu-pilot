@@ -1,3 +1,5 @@
+#summary Credit to Multiwii
+
 This should explain how we genenerate the PWM signals to Control ESC's and Servos
 What is a PWM Signal
 PWM (Pulse Width Modulation) is a square wave signal with a variable duty time (High, on time) we use it to simulate a PPM (Pulse-position modulation) signal that is used to tell the ESC's their trottle state or servos their position. to have a valid PPM signal the PWM signals duty time needs to variate between 1 and 2 millisecons (1000us - 2000us).
