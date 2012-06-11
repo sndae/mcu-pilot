@@ -14,6 +14,8 @@ The second one (that we use in MWC 2.0) is to access the MCU's PWM register in a
 Hardware PWM works only on some specified pins. that is also the reason why we cant run 8 HW PWMs on the promini.
 Software PWM (SW PWM)
 We use it in MWC for servos and ESC's but only if there are not enough HW PWM pins available. there are many ways to do it. for example a small sketch that does it with the main loop:
+{{{
+
 void setup(){
   pinMode(13,OUTPUT); // set pin 13 witch is no HW PWM pin as output
 }
@@ -29,6 +31,8 @@ void loop(){
   delayMicroseconds(500); // let it stay 500us at low state to have a overall loop time of 2000us (500Hz)
 
 }
+
+}}}
 this works well if the arduino has nothing else to do then generating a PWM signal. but we need the main loop to read the RX, calculate the movent and many other things. so we cant use it like this. To be more independent from the main loops code we use interrupts thay do (as the name says) an interrupt at the moment thay need to be processed. so thay stop the main loops code as long as it takes to finish the interrupts code.
 One problem if the interrupt use is if two or more interrupts want to be processed at the same time. than some of them must wait for the others. that causes jitter to thair time calculations.
 a small example for a interrupt driven soft PWM code
