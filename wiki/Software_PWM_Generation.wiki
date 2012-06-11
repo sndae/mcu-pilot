@@ -33,9 +33,13 @@ void loop(){
 }
 
 }}}
+
 this works well if the arduino has nothing else to do then generating a PWM signal. but we need the main loop to read the RX, calculate the movent and many other things. so we cant use it like this. To be more independent from the main loops code we use interrupts thay do (as the name says) an interrupt at the moment thay need to be processed. so thay stop the main loops code as long as it takes to finish the interrupts code.
 One problem if the interrupt use is if two or more interrupts want to be processed at the same time. than some of them must wait for the others. that causes jitter to thair time calculations.
 a small example for a interrupt driven soft PWM code
+
+{{{
+
 // i use timer 0 for example it runs with default settings at 976Hz
 // and it resolution is 8 bit (0-255)
 
@@ -83,6 +87,9 @@ ISR(TIMER0_COMPA_vect){
 void loop(){
   // the loop isnt needed for this method
 }
+
+}}}
+
 Use of this PWM methods in Multiwii
 In MultiWii we need to do it for 3 different MCU types (ATmega328P (Arduino ProMini), Atmega32u4 (arduino ProMicro) and the Arduino Mega MCU's)
 the HW PWM capabilities of the MCU's we use
@@ -96,6 +103,8 @@ Timer 0 can only be used for software PWM because its frequency is too high (976
 in the normal case we use timer 0 with SW PMW for the servos and all others for motors. in some special cases (promini in a hexa with servos or octo setup) we use one or both timer 0 comperators for doing SW PWM for motors.
 Code examples of the initialisation and use in MultiWii
 use of a 8 bit Timer. ...timer 2 comperator A for example (wont work on the promicro because there is no timer 2)
+
+{{{
   
 // MultiWii uses values from 1000 to 2000 for the motor and servo calculation (because of the PPM singnal range of 1000-2000us)
 // this means that we would need 11-bit to keep this resolution. some timers have just 8-bit (0-255) so wee need to divide the value by 8 
@@ -117,7 +126,13 @@ void setup(){
 void loop(){
     // to change the dutytime we just need to write a value to the OCR2A Register
 }
+
+}}}
+
 use of a 16-bit timer ...timer 1 comperator A for example
+
+{{{
+
 // using a 16-bit timer in arduino is a bit more complex because arduinos standad setup stets them to 8 bit
 // the higher the resolution is the slower is the timer .. (it counts always in the same speed .. so it takes 3* longer to count till 30 then it takes to count to10)
 // because of this and the fact that MultiiWii dont uses 16-bit for the motor calculations we dont need to set them to thair full resolution
@@ -143,7 +158,13 @@ void setup(){
 void loop(){
     // to change the dutytime we just need to write a value to the OCR1A Register
 }
+
+}}}
+
 use of a 11-bit timer ...timer 4 comperator A for example (for now just the ATmega32u4 -> promicro has a 11-bit timer)
+
+{{{
+
 // this 11-bit timer is some kind of different to the others because it is made to work with very high frequencys 
 // but we use it with 488Hz just as the other ones.
 // because it is 11-bit we dont need to divide or multiply .. we take the MWC's values just as thay are
@@ -190,3 +211,5 @@ void setup(){
 void loop(){
   // to change the dutytime we just need to write the high and the low byte to TC4H(high byte) and OCR4A (low byte)
 }
+
+}}}
