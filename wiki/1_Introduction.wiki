@@ -2,4 +2,4 @@
 #labels Featured
 
 =1 Introduction =
-=
+This project deals with the development of flight electronics for a small scale-unmanned helicopter. 
