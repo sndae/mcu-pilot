@@ -1,4 +1,5 @@
 #summary Servo Specifications
+#labels Featured
 
 
 <img src="http://i294.photobucket.com/albums/mm96/JavenLoh/DS610.jpg" border="0" alt="Photobucket">
