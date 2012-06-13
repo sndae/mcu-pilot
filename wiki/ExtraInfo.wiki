@@ -7,7 +7,7 @@
   * 333Hz Refresh Rate and 1520µs Neutral Pulse 
   * 0.10Second/60Degree, 9.6Kg.cm Torque @ 4.8V
   * 0.08Second/60Degree, 12.0Kg.cm Torque @ 6V
-  * Can be bought here [http://www.align.com.tw/shop/product_info.php?cPath=22_29&products_id=2406 DS610]
+  * Can be bought here [http://www.align.com.tw/shop/product_info.php?cPath=22_29&products_id=2406 Align DS610 Servo]
 
 
 <img src="http://i294.photobucket.com/albums/mm96/JavenLoh/DS650.jpg" border="0" alt="Photobucket">
@@ -15,4 +15,4 @@
   * 333Hz Refresh Rate and 1520µs Neutral Pulse
   * 0.06Second/60Degree, 4.0Kg.cm Torque @ 4.8V
   * 0.05Second/60Degree, 5.0Kg.cm Torque @ 6V
-  * Can be bought here [http://www.align.com.tw/shop/product_info.php?cPath=22_29&products_id=2981 DS650]
+  * Can be bought here [http://www.align.com.tw/shop/product_info.php?cPath=22_29&products_id=2981 Align DS650 Servo]
