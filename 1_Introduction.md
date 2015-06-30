@@ -1,0 +1,8 @@
+# 1 Introduction #
+This project deals with the development of flight electronics for small scale-unmanned helicopter.
+
+# 1.1 The MCU-Pilot Project #
+
+# 1.2 Challenges #
+
+# 1.3 Documentation Overview #
